@@ -1,4 +1,4 @@
-#include "Header.h"
+Ôªø#include "Header.h"
 
 static void printCat() {
     std::cout << " /\\_/\\\n";
@@ -6,12 +6,12 @@ static void printCat() {
     std::cout << " > ^ <\n";
 }
 
-// «¿ƒ¿◊¿ 1:  Œƒ ’›ÃÃ»Õ√¿ 
+// –ó–ê–î–ê–ß–ê 1: –ö–û–î –•–≠–ú–ú–ò–ù–ì–ê 
 void Hamming15() {
     using namespace std;
-    cout << "\n«¿ƒ¿◊¿ 1:  Œƒ ’›ÃÃ»Õ√¿\n";
+    cout << "\n–ó–ê–î–ê–ß–ê 1: –ö–û–î –•–≠–ú–ú–ò–ù–ì–ê\n";
     string data = "1010010111";
-    cout << "—ÓÓ·˘ÂÌËÂ ÔÓ ‚‡Ë‡ÌÚÛ: " << data << endl;
+    cout << "–°–æ–æ–±—â–µ–Ω–∏–µ –ø–æ –≤–∞—Ä–∏–∞–Ω—Ç—É: " << data << endl;
 
     int m = data.length();
     int r = 0;
@@ -20,17 +20,17 @@ void Hamming15() {
     int n = m + r;
     vector<int> hamming(n + 1, 0);
 
-    cout << "\n œŒ—“–Œ≈Õ»≈  Œƒ¿ ’›ÃÃ»Õ√¿ \n";
-    cout << "»ÌÙÓÏ‡ˆËÓÌÌ˚ı ·ËÚÓ‚ (m) = " << m << endl;
-    cout << " ÓÌÚÓÎ¸Ì˚ı ·ËÚÓ‚ (r) = " << r << endl;
-    cout << "Œ·˘‡ˇ ‰ÎËÌ‡ ÍÓ‰‡ (n) = " << n << endl;
-    cout << "\nœÓÁËˆËË ÍÓÌÚÓÎ¸Ì˚ı ·ËÚÓ‚ (ÒÚÂÔÂÌË ‰‚ÓÈÍË): ";
+    cout << "\n –ü–û–°–¢–†–û–ï–ù–ò–ï –ö–û–î–ê –•–≠–ú–ú–ò–ù–ì–ê \n";
+    cout << "–ò–Ω—Ñ–æ—Ä–º–∞—Ü–∏–æ–Ω–Ω—ã—Ö –±–∏—Ç–æ–≤ (m) = " << m << endl;
+    cout << "–ö–æ–Ω—Ç—Ä–æ–ª—å–Ω—ã—Ö –±–∏—Ç–æ–≤ (r) = " << r << endl;
+    cout << "–û–±—â–∞—è –¥–ª–∏–Ω–∞ –∫–æ–¥–∞ (n) = " << n << endl;
+    cout << "\n–ü–æ–∑–∏—Ü–∏–∏ –∫–æ–Ω—Ç—Ä–æ–ª—å–Ω—ã—Ö –±–∏—Ç–æ–≤ (—Å—Ç–µ–ø–µ–Ω–∏ –¥–≤–æ–π–∫–∏): ";
     for (int i = 0; i < r; i++) {
         cout << (1 << i) << " ";
     }
     cout << endl;
 
-    // «‡ÔÓÎÌˇÂÏ ËÌÙÓÏ‡ˆËÓÌÌ˚Â ·ËÚ˚
+    // –ó–∞–ø–æ–ª–Ω—è–µ–º –∏–Ω—Ñ–æ—Ä–º–∞—Ü–∏–æ–Ω–Ω—ã–µ –±–∏—Ç—ã
     int dataIdx = 0;
     for (int i = 1; i <= n; i++) {
         bool isPowerOfTwo = (i & (i - 1)) == 0;
@@ -42,13 +42,13 @@ void Hamming15() {
         bool isPowerOfTwo = (i & (i - 1)) == 0;
     }
 
-    // ¬˚˜ËÒÎˇÂÏ ÍÓÌÚÓÎ¸Ì˚Â ·ËÚ˚
-    cout << "\n ¬€◊»—À≈Õ»≈  ŒÕ“–ŒÀ‹Õ€’ ¡»“Œ¬ \n";
+    // –í—ã—á–∏—Å–ª—è–µ–º –∫–æ–Ω—Ç—Ä–æ–ª—å–Ω—ã–µ –±–∏—Ç—ã
+    cout << "\n –í–´–ß–ò–°–õ–ï–ù–ò–ï –ö–û–ù–¢–†–û–õ–¨–ù–´–• –ë–ò–¢–û–í \n";
     for (int i = 0; i < r; i++) {
         int pos = 1 << i;
         int sum = 0;
-        cout << "\n ÓÌÚÓÎ¸Ì˚È ·ËÚ p" << pos << ":\n";
-        cout << "  œÓ‚ÂˇÂÏ˚Â ÔÓÁËˆËË: ";
+        cout << "\n–ö–æ–Ω—Ç—Ä–æ–ª—å–Ω—ã–π –±–∏—Ç p" << pos << ":\n";
+        cout << "  –ü—Ä–æ–≤–µ—Ä—è–µ–º—ã–µ –ø–æ–∑–∏—Ü–∏–∏: ";
         for (int j = pos+1; j <= n; j++) {
             if (j & pos) {
                 cout << j << " ";
@@ -59,47 +59,47 @@ void Hamming15() {
         for (int j = pos; j <= n; j++) {
             if (j & pos) {
                 if (j != pos) {
-                    cout << "  ÔÓÁËˆËˇ " << j << " = " << hamming[j] << endl;
+                    cout << "  –ø–æ–∑–∏—Ü–∏—è " << j << " = " << hamming[j] << endl;
                     sum ^= hamming[j];
                 }
             }
         }
         hamming[pos] = sum;
-        cout << "  XOR ÒÛÏÏ‡ = " << sum << " -> p" << pos << " = " << sum << endl;
+        cout << "  XOR —Å—É–º–º–∞ = " << sum << " -> p" << pos << " = " << sum << endl;
     }
 
-    cout << "\n  Ó‰ ’˝ÏÏËÌ„‡: \n";
+    cout << "\n –ö–æ–¥ –•—ç–º–º–∏–Ω–≥–∞: \n";
     for (int i = 1; i <= n; i++) {
         cout << hamming[i];
     }
     cout << endl;
 
-    // »ÏËÚ‡ˆËˇ Ó¯Ë·ÍË
+    // –ò–º–∏—Ç–∞—Ü–∏—è –æ—à–∏–±–∫–∏
     int errorBit;
-    cout << "\n »Ã»“¿÷»ﬂ Œÿ»¡ » \n";
-    cout << "¬‚Â‰ËÚÂ ÌÓÏÂ ·ËÚ‡ ‰Îˇ ËÏËÚ‡ˆËË Ó¯Ë·ÍË (1-" << n << ", 0 - ·ÂÁ Ó¯Ë·ÍË): ";
+    cout << "\n –ò–ú–ò–¢–ê–¶–ò–Ø –û–®–ò–ë–ö–ò \n";
+    cout << "–í–≤–µ–¥–∏—Ç–µ –Ω–æ–º–µ—Ä –±–∏—Ç–∞ –¥–ª—è –∏–º–∏—Ç–∞—Ü–∏–∏ –æ—à–∏–±–∫–∏ (1-" << n << ", 0 - –±–µ–∑ –æ—à–∏–±–∫–∏): ";
     cin >> errorBit;
 
     if (errorBit >= 1 && errorBit <= n) {
-        cout << "»Ì‚ÂÚËÛÂÏ:\n";
-        cout << "  ¡˚ÎÓ: " << hamming[errorBit] << endl;
+        cout << "–ò–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º:\n";
+        cout << "  –ë—ã–ª–æ: " << hamming[errorBit] << endl;
         hamming[errorBit] ^= 1;
-        cout << "  —Ú‡ÎÓ: " << hamming[errorBit] << endl;
+        cout << "  –°—Ç–∞–ª–æ: " << hamming[errorBit] << endl;
 
-        cout << "\n Ó‰ Ò Ó¯Ë·ÍÓÈ: ";
+        cout << "\n–ö–æ–¥ —Å –æ—à–∏–±–∫–æ–π: ";
         for (int i = 1; i <= n; i++) {
             cout << hamming[i];
         }
         cout << endl;
 
-        // ¬˚˜ËÒÎÂÌËÂ ÒËÌ‰ÓÏ‡
-        cout << "\n ¬€◊»—À≈Õ»≈ Œÿ»¡ » \n";
+        // –í—ã—á–∏—Å–ª–µ–Ω–∏–µ —Å–∏–Ω–¥—Ä–æ–º–∞
+        cout << "\n –í–´–ß–ò–°–õ–ï–ù–ò–ï –û–®–ò–ë–ö–ò \n";
         int syndrome = 0;
         for (int i = 0; i < r; i++) {
             int pos = 1 << i;
             int sum = 0;
-            cout << "\nœÓ‚ÂÍ‡ p" << pos << ":\n";
-            cout << "  œÓ‚ÂˇÂÏ˚Â ÔÓÁËˆËË: ";
+            cout << "\n–ü—Ä–æ–≤–µ—Ä–∫–∞ p" << pos << ":\n";
+            cout << "  –ü—Ä–æ–≤–µ—Ä—è–µ–º—ã–µ –ø–æ–∑–∏—Ü–∏–∏: ";
             for (int j = pos; j <= n; j++) {
                 if (j & pos) {
                     cout << j << " ";
@@ -109,14 +109,14 @@ void Hamming15() {
 
             for (int j = pos; j <= n; j++) {
                 if (j & pos) {
-                    cout << "  ÔÓÁËˆËˇ " << j << " = " << hamming[j] << endl;
+                    cout << "  –ø–æ–∑–∏—Ü–∏—è " << j << " = " << hamming[j] << endl;
                     sum ^= hamming[j];
                 }
             }
-            cout << "  XOR ÒÛÏÏ‡ = " << sum << endl;
+            cout << "  XOR —Å—É–º–º–∞ = " << sum << endl;
 
             if (sum) {
-                cout << "  -> Õ≈—ŒŒ“¬≈“—“¬»≈! Œ¯Ë·Í‡ (XOR ‰ÓÎÊÌ‡ ·˚Ú¸ 0)\n";
+                cout << "  -> –ù–ï–°–û–û–¢–í–ï–¢–°–¢–í–ò–ï! –û—à–∏–±–∫–∞ (XOR –¥–æ–ª–∂–Ω–∞ –±—ã—Ç—å 0)\n";
                 syndrome += pos;
             }
             else {
@@ -124,22 +124,22 @@ void Hamming15() {
             }
         }
 
-        cout << "\n –≈«”À‹“¿“ \n";
-        cout << "—ËÌ‰ÓÏ (ÌÓÏÂ Ó¯Ë·Ó˜ÌÓ„Ó ·ËÚ‡, ÒÍÎ‡‰˚‚‡ÂÚÒˇ ËÁ ËÌ‰ÂÍÒÓ‚ XOR = 1): " << syndrome << endl;
+        cout << "\n –†–ï–ó–£–õ–¨–¢–ê–¢ \n";
+        cout << "–°–∏–Ω–¥—Ä–æ–º (–Ω–æ–º–µ—Ä –æ—à–∏–±–æ—á–Ω–æ–≥–æ –±–∏—Ç–∞, —Å–∫–ª–∞–¥—ã–≤–∞–µ—Ç—Å—è –∏–∑ –∏–Ω–¥–µ–∫—Å–æ–≤ XOR = 1): " << syndrome << endl;
 
         if (syndrome != 0 && syndrome <= n) {
-            cout << "»Ì‚ÂÚËÛÂÏ ·ËÚ Ì‡ ÔÓÁËˆËË \n";
-            cout << "  ¡˚ÎÓ: " << hamming[syndrome] << endl;
+            cout << "–ò–Ω–≤–µ—Ä—Ç–∏—Ä—É–µ–º –±–∏—Ç –Ω–∞ –ø–æ–∑–∏—Ü–∏–∏ \n";
+            cout << "  –ë—ã–ª–æ: " << hamming[syndrome] << endl;
             hamming[syndrome] ^= 1;
-            cout << "  —Ú‡ÎÓ: " << hamming[syndrome] << endl;
+            cout << "  –°—Ç–∞–ª–æ: " << hamming[syndrome] << endl;
 
-            cout << "\n»ÒÔ‡‚ÎÂÌÌ˚È ÍÓ‰: ";
+            cout << "\n–ò—Å–ø—Ä–∞–≤–ª–µ–Ω–Ω—ã–π –∫–æ–¥: ";
             for (int i = 1; i <= n; i++) {
                 cout << hamming[i];
             }
             cout << endl;
 
-            // »Á‚ÎÂ˜ÂÌËÂ ËÒÔ‡‚ÎÂÌÌÓ„Ó ÒÓÓ·˘ÂÌËˇ
+            // –ò–∑–≤–ª–µ—á–µ–Ω–∏–µ –∏—Å–ø—Ä–∞–≤–ª–µ–Ω–Ω–æ–≥–æ —Å–æ–æ–±—â–µ–Ω–∏—è
             string recovered;
             for (int i = 1; i <= n; i++) {
                 bool isPowerOfTwo = (i & (i - 1)) == 0;
@@ -147,35 +147,35 @@ void Hamming15() {
                     recovered += to_string(hamming[i]);
                 }
             }
-            cout << "»ÒÔ‡‚ÎÂÌÌÓÂ ÒÓÓ·˘ÂÌËÂ: " << recovered << endl;
+            cout << "–ò—Å–ø—Ä–∞–≤–ª–µ–Ω–Ω–æ–µ —Å–æ–æ–±—â–µ–Ω–∏–µ: " << recovered << endl;
 
             if (recovered == data) {
-                cout << "—ÓÓ·˘ÂÌËÂ ÛÒÔÂ¯ÌÓ ‚ÓÒÒÚ‡ÌÓ‚ÎÂÌÓ!\n";
+                cout << "–°–æ–æ–±—â–µ–Ω–∏–µ —É—Å–ø–µ—à–Ω–æ –≤–æ—Å—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω–æ!\n";
             }
             else {
-                cout << "—ÓÓ·˘ÂÌËÂ ‚ÓÒÒÚ‡ÌÓ‚ÎÂÌÓ Ò Ó¯Ë·ÍÓÈ!\n";
+                cout << "–°–æ–æ–±—â–µ–Ω–∏–µ –≤–æ—Å—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω–æ —Å –æ—à–∏–±–∫–æ–π!\n";
             }
         }
         else if (syndrome != 0) {
-            cout << "—ËÌ‰ÓÏ = " << syndrome << ", ÌÓ ˝ÚÓ ÁÌ‡˜ÂÌËÂ ‚˚ıÓ‰ËÚ Á‡ ÔÂ‰ÂÎ˚ ÍÓ‰‡ (1.." << n << ")\n";
-            cout << "Œ¯Ë·Í‡ ÌÂ ÏÓÊÂÚ ·˚Ú¸ ËÒÔ‡‚ÎÂÌ‡ (‚ÓÁÏÓÊÌÓ, Ó¯Ë·Í‡ ‚ ÍÓÌÚÓÎ¸ÌÓÏ ·ËÚÂ ËÎË ÏÌÓÊÂÒÚ‚ÂÌÌ‡ˇ Ó¯Ë·Í‡)\n";
+            cout << "–°–∏–Ω–¥—Ä–æ–º = " << syndrome << ", –Ω–æ —ç—Ç–æ –∑–Ω–∞—á–µ–Ω–∏–µ –≤—ã—Ö–æ–¥–∏—Ç –∑–∞ –ø—Ä–µ–¥–µ–ª—ã –∫–æ–¥–∞ (1.." << n << ")\n";
+            cout << "–û—à–∏–±–∫–∞ –Ω–µ –º–æ–∂–µ—Ç –±—ã—Ç—å –∏—Å–ø—Ä–∞–≤–ª–µ–Ω–∞ (–≤–æ–∑–º–æ–∂–Ω–æ, –æ—à–∏–±–∫–∞ –≤ –∫–æ–Ω—Ç—Ä–æ–ª—å–Ω–æ–º –±–∏—Ç–µ –∏–ª–∏ –º–Ω–æ–∂–µ—Å—Ç–≤–µ–Ω–Ω–∞—è –æ—à–∏–±–∫–∞)\n";
         }
         else {
-            cout << "—ËÌ‰ÓÏ = 0 -> Ó¯Ë·ÓÍ ÌÂ Ó·Ì‡ÛÊÂÌÓ\n";
+            cout << "–°–∏–Ω–¥—Ä–æ–º = 0 -> –æ—à–∏–±–æ–∫ –Ω–µ –æ–±–Ω–∞—Ä—É–∂–µ–Ω–æ\n";
         }
     }
     else if (errorBit == 0) {
-        cout << "Œ¯Ë·Í‡ ÌÂ ËÏËÚËÓ‚‡Î‡Ò¸\n";
+        cout << "–û—à–∏–±–∫–∞ –Ω–µ –∏–º–∏—Ç–∏—Ä–æ–≤–∞–ª–∞—Å—å\n";
     }
     else {
-        cout << "ÕÂ‚ÂÌ˚È ÌÓÏÂ ·ËÚ‡\n";
+        cout << "–ù–µ–≤–µ—Ä–Ω—ã–π –Ω–æ–º–µ—Ä –±–∏—Ç–∞\n";
     }
     printCat();
 }
 
-//  «¿ƒ¿◊¿ 2:  Œƒ ’¿‘‘Ã¿Õ¿ 
+//  –ó–ê–î–ê–ß–ê 2: –ö–û–î –•–ê–§–§–ú–ê–ù–ê 
 
-// –Â‡ÎËÁ‡ˆËˇ HuffmanNode
+// –†–µ–∞–ª–∏–∑–∞—Ü–∏—è HuffmanNode
 HuffmanNode::HuffmanNode(char c, int f) : ch(c), freq(f), left(nullptr), right(nullptr) {}
 HuffmanNode::HuffmanNode(int f, HuffmanNode* l, HuffmanNode* r) : ch(0), freq(f), left(l), right(r) {}
 HuffmanNode::~HuffmanNode() {}
@@ -187,7 +187,7 @@ std::string HuffmanNode::toString() const {
     return "*(" + std::to_string(freq) + ")";
 }
 
-// –Â‡ÎËÁ‡ˆËˇ HuffmanTree
+// –†–µ–∞–ª–∏–∑–∞—Ü–∏—è HuffmanTree
 HuffmanTree::HuffmanTree() : root(nullptr) {}
 
 HuffmanTree::HuffmanTree(const HuffmanTree& other) : root(nullptr) {
@@ -277,8 +277,8 @@ void HuffmanTree::printTreeSideRecursiveConsole(HuffmanNode* node, int level) {
 }
 
 void HuffmanTree::printTreeSideConsole() {
-    std::cout << "\n√‡ÙË˜ÂÒÍÓÂ ÔÂ‰ÒÚ‡‚ÎÂÌËÂ ‰ÂÂ‚‡ ’‡ÙÙÏ‡Ì‡:\n";
-    std::cout << "( ÓÂÌ¸ ÒÔ‡‚‡, ÎËÒÚ¸ˇ ÒÎÂ‚‡)\n\n";
+    std::cout << "\n–ì—Ä–∞—Ñ–∏—á–µ—Å–∫–æ–µ –ø—Ä–µ–¥—Å—Ç–∞–≤–ª–µ–Ω–∏–µ –¥–µ—Ä–µ–≤–∞ –•–∞—Ñ—Ñ–º–∞–Ω–∞:\n";
+    std::cout << "(–ö–æ—Ä–µ–Ω—å —Å–ø—Ä–∞–≤–∞, –ª–∏—Å—Ç—å—è —Å–ª–µ–≤–∞)\n\n";
     printTreeSideRecursiveConsole(root, 0);
 }
 
@@ -293,8 +293,8 @@ void HuffmanTree::printTreeSideRecursive(HuffmanNode* node, int level, std::ofst
 void HuffmanTree::printTreeSideFile(const std::string& filename, int width) {
     std::ofstream file(filename, std::ios::app);
     if (!file.is_open()) return;
-    file << "\n√‡ÙË˜ÂÒÍÓÂ ÔÂ‰ÒÚ‡‚ÎÂÌËÂ ‰ÂÂ‚‡ ’‡ÙÙÏ‡Ì‡:\n";
-    file << "( ÓÂÌ¸ ÒÔ‡‚‡, ÎËÒÚ¸ˇ ÒÎÂ‚‡)\n\n";
+    file << "\n–ì—Ä–∞—Ñ–∏—á–µ—Å–∫–æ–µ –ø—Ä–µ–¥—Å—Ç–∞–≤–ª–µ–Ω–∏–µ –¥–µ—Ä–µ–≤–∞ –•–∞—Ñ—Ñ–º–∞–Ω–∞:\n";
+    file << "(–ö–æ—Ä–µ–Ω—å —Å–ø—Ä–∞–≤–∞, –ª–∏—Å—Ç—å—è —Å–ª–µ–≤–∞)\n\n";
     printTreeSideRecursive(root, 0, file, width);
     file.close();
 }
@@ -331,10 +331,10 @@ void HuffmanTree::clear() {
 
 void Huffman1() {
     using namespace std;
-    cout << "\n «¿ƒ¿◊¿ 2:  Œƒ ’¿‘‘Ã¿Õ¿\n";
+    cout << "\n –ó–ê–î–ê–ß–ê 2: –ö–û–î –•–ê–§–§–ú–ê–ù–ê\n";
 
-    string text = "”¬»ƒ»Ã ¬¿ƒ»Ã¿ » ”ƒ»¬»Ã";
-    cout << "“ÂÍÒÚ ÔÓ ‚‡Ë‡ÌÚÛ: \"" << text << "\"\n";
+    string text = "–£–í–ò–î–ò–ú –í–ê–î–ò–ú–ê –ò –£–î–ò–í–ò–ú";
+    cout << "–¢–µ–∫—Å—Ç –ø–æ –≤–∞—Ä–∏–∞–Ω—Ç—É: \"" << text << "\"\n";
 
     HuffmanTree tree;
     tree.buildFromText(text);
@@ -342,7 +342,7 @@ void Huffman1() {
     map<char, int> freq;
     for (char c : text) freq[c]++;
 
-    cout << "\n◊‡ÒÚÓÚ˚ ÒËÏ‚ÓÎÓ‚:\n";
+    cout << "\n–ß–∞—Å—Ç–æ—Ç—ã —Å–∏–º–≤–æ–ª–æ–≤:\n";
     for (auto& p : freq) {
         cout << "  '" << p.first << "' : " << p.second << endl;
     }
@@ -350,7 +350,7 @@ void Huffman1() {
     map<char, string> codes;
     tree.getCodes(codes);
 
-    cout << "\n Ó‰˚ ÒËÏ‚ÓÎÓ‚:\n";
+    cout << "\n–ö–æ–¥—ã —Å–∏–º–≤–æ–ª–æ–≤:\n";
     for (auto& p : codes) {
         cout << "  '" << p.first << "' -> " << p.second << endl;
     }
@@ -361,31 +361,31 @@ void Huffman1() {
     int uniformBits = text.length() * 8;
     int huffmanBits = encoded.length();
 
-    cout << "\n –≈«”À‹“¿“ \n";
-    cout << "»ÒıÓ‰Ì˚È ÚÂÍÒÚ: " << text << endl;
-    cout << "«‡ÍÓ‰ËÓ‚‡ÌÌÓÂ ÒÓÓ·˘ÂÌËÂ (" << huffmanBits << " ·ËÚ):\n";
+    cout << "\n –†–ï–ó–£–õ–¨–¢–ê–¢ \n";
+    cout << "–ò—Å—Ö–æ–¥–Ω—ã–π —Ç–µ–∫—Å—Ç: " << text << endl;
+    cout << "–ó–∞–∫–æ–¥–∏—Ä–æ–≤–∞–Ω–Ω–æ–µ —Å–æ–æ–±—â–µ–Ω–∏–µ (" << huffmanBits << " –±–∏—Ç):\n";
     for (size_t i = 0; i < encoded.length(); i++) {
         cout << encoded[i];
         if ((i + 1) % 8 == 0 && i != encoded.length() - 1);
     }
     cout << endl;
 
-    cout << "\nƒÎËÌ‡ ÔË ‡‚ÌÓÏÂÌÓÏ ÍÓ‰ËÓ‚‡ÌËË (8 ·ËÚ/ÒËÏ‚ÓÎ): " << uniformBits << " ·ËÚ\n";
-    cout << "ƒÎËÌ‡ ÔË ÍÓ‰ËÓ‚‡ÌËË ’‡ÙÙÏ‡Ì‡: " << huffmanBits << " ·ËÚ\n";
-    cout << "›ÍÓÌÓÏËˇ: " << uniformBits - huffmanBits << " ·ËÚ\n";
+    cout << "\n–î–ª–∏–Ω–∞ –ø—Ä–∏ —Ä–∞–≤–Ω–æ–º–µ—Ä–Ω–æ–º –∫–æ–¥–∏—Ä–æ–≤–∞–Ω–∏–∏ (8 –±–∏—Ç/—Å–∏–º–≤–æ–ª): " << uniformBits << " –±–∏—Ç\n";
+    cout << "–î–ª–∏–Ω–∞ –ø—Ä–∏ –∫–æ–¥–∏—Ä–æ–≤–∞–Ω–∏–∏ –•–∞—Ñ—Ñ–º–∞–Ω–∞: " << huffmanBits << " –±–∏—Ç\n";
+    cout << "–≠–∫–æ–Ω–æ–º–∏—è: " << uniformBits - huffmanBits << " –±–∏—Ç\n";
 
     printCat();
 }
 
-// «¿ƒ¿◊¿ 3: ÿ»‘– ÃŒ–«≈ 
+// –ó–ê–î–ê–ß–ê 3: –®–ò–§–† –ú–û–†–ó–ï 
 
 int inputMethod() {
     int method;
-    std::cout << "\n—ÔÓÒÓ· ‚‚Ó‰‡ ‰‡ÌÌ˚ı:\n";
-    std::cout << "1. ¬‚Ó‰ Ò ÍÓÌÒÓÎË\n";
-    std::cout << "2. —ÎÛ˜‡ÈÌ˚Â ‰‡ÌÌ˚Â\n";
-    std::cout << "3. »Á Ù‡ÈÎ‡\n";
-    std::cout << "¬˚·Ó: ";
+    std::cout << "\n–°–ø–æ—Å–æ–± –≤–≤–æ–¥–∞ –¥–∞–Ω–Ω—ã—Ö:\n";
+    std::cout << "1. –í–≤–æ–¥ —Å –∫–æ–Ω—Å–æ–ª–∏\n";
+    std::cout << "2. –°–ª—É—á–∞–π–Ω—ã–µ –¥–∞–Ω–Ω—ã–µ\n";
+    std::cout << "3. –ò–∑ —Ñ–∞–π–ª–∞\n";
+    std::cout << "–í—ã–±–æ—Ä: ";
     std::cin >> method;
     return method;
 }
@@ -393,38 +393,38 @@ int inputMethod() {
 void Morse3() {
     using namespace std;
 
-    cout << "\n «¿ƒ¿◊¿ 3: ÿ»‘– ÃŒ–«≈ \n";
+    cout << "\n –ó–ê–î–ê–ß–ê 3: –®–ò–§–† –ú–û–†–ó–ï \n";
 
     int lang;
-    cout << "\n¬˚·ÂËÚÂ ˇÁ˚Í:\n";
-    cout << "1. –ÛÒÒÍËÈ\n";
-    cout << "2. ¿Ì„ÎËÈÒÍËÈ\n";
-    cout << "¬˚·Ó: ";
+    cout << "\n–í—ã–±–µ—Ä–∏—Ç–µ —è–∑—ã–∫:\n";
+    cout << "1. –†—É—Å—Å–∫–∏–π\n";
+    cout << "2. –ê–Ω–≥–ª–∏–π—Å–∫–∏–π\n";
+    cout << "–í—ã–±–æ—Ä: ";
     cin >> lang;
     if (cin.fail()) {
         cin.clear();
         cin.ignore(100, '\n');
-        cout << "Œ¯Ë·Í‡ ‚‚Ó‰‡!\n";
+        cout << "–û—à–∏–±–∫–∞ –≤–≤–æ–¥–∞!\n";
     }
 
     map<char, string> morse;
     map<string, char> revMorse;
 
     if (lang == 1) {
-        morse['¿'] = ".-";     morse['¡'] = "-...";   morse['¬'] = ".--";
-        morse['√'] = "--.";    morse['ƒ'] = "-..";    morse['≈'] = ".";
-        morse['∆'] = "...-";   morse['«'] = "--..";   morse['»'] = "..";
-        morse['…'] = ".---";   morse[' '] = "-.-";    morse['À'] = ".-..";
-        morse['Ã'] = "--";     morse['Õ'] = "-.";     morse['Œ'] = "---";
-        morse['œ'] = ".--.";   morse['–'] = ".-.";    morse['—'] = "...";
-        morse['“'] = "-";      morse['”'] = "..-";    morse['‘'] = "..-.";
-        morse['’'] = "....";   morse['÷'] = "-.-.";   morse['◊'] = "---.";
-        morse['ÿ'] = "----";   morse['Ÿ'] = "--.-";   morse['⁄'] = "--.--";
-        morse['€'] = "-.--";   morse['‹'] = "-..-";   morse['›'] = "..-..";
-        morse['ﬁ'] = "..--";   morse['ﬂ'] = ".-.-";
+        morse['–ê'] = ".-";     morse['–ë'] = "-...";   morse['–í'] = ".--";
+        morse['–ì'] = "--.";    morse['–î'] = "-..";    morse['–ï'] = ".";
+        morse['–ñ'] = "...-";   morse['–ó'] = "--..";   morse['–ò'] = "..";
+        morse['–ô'] = ".---";   morse['–ö'] = "-.-";    morse['–õ'] = ".-..";
+        morse['–ú'] = "--";     morse['–ù'] = "-.";     morse['–û'] = "---";
+        morse['–ü'] = ".--.";   morse['–†'] = ".-.";    morse['–°'] = "...";
+        morse['–¢'] = "-";      morse['–£'] = "..-";    morse['–§'] = "..-.";
+        morse['–•'] = "....";   morse['–¶'] = "-.-.";   morse['–ß'] = "---.";
+        morse['–®'] = "----";   morse['–©'] = "--.-";   morse['–™'] = "--.--";
+        morse['–´'] = "-.--";   morse['–¨'] = "-..-";   morse['–≠'] = "..-..";
+        morse['–Æ'] = "..--";   morse['–Ø'] = ".-.-";
         morse[' '] = "/";
         for (auto& p : morse) revMorse[p.second] = p.first;
-        cout << "\n¬˚·‡Ì ÛÒÒÍËÈ ˇÁ˚Í\n";
+        cout << "\n–í—ã–±—Ä–∞–Ω —Ä—É—Å—Å–∫–∏–π —è–∑—ã–∫\n";
     }
     else {
         morse['A'] = ".-";     morse['B'] = "-...";   morse['C'] = "-.-.";
@@ -438,22 +438,22 @@ void Morse3() {
         morse['Y'] = "-.--";   morse['Z'] = "--..";
         morse[' '] = "/";
         for (auto& p : morse) revMorse[p.second] = p.first;
-        cout << "\n¬˚·‡Ì ‡Ì„ÎËÈÒÍËÈ ˇÁ˚Í\n";
+        cout << "\n–í—ã–±—Ä–∞–Ω –∞–Ω–≥–ª–∏–π—Å–∫–∏–π —è–∑—ã–∫\n";
     }
 
-    cout << "\n= ÿ»‘–Œ¬¿Õ»≈ =\n";
+    cout << "\n= –®–ò–§–†–û–í–ê–ù–ò–ï =\n";
     string originalText;
     int methodEncode = inputMethod();
 
     if (methodEncode == 1) {
         cin.ignore();
-        cout << "¬‚Â‰ËÚÂ ÚÂÍÒÚ ‰Îˇ ¯ËÙÓ‚‡ÌËˇ: ";
+        cout << "–í–≤–µ–¥–∏—Ç–µ —Ç–µ–∫—Å—Ç –¥–ª—è —à–∏—Ñ—Ä–æ–≤–∞–Ω–∏—è: ";
         getline(cin, originalText);
     }
     else if (methodEncode == 2) {
         vector<string> words;
         if (lang == 1) {
-            words = { "œ–»¬≈“", "Ã»–", "ÃŒ–«≈", "¿«¡” ¿", "ÿ»‘–" };
+            words = { "–ü–†–ò–í–ï–¢", "–ú–ò–†", "–ú–û–†–ó–ï", "–ê–ó–ë–£–ö–ê", "–®–ò–§–†" };
         }
         else {
             words = { "HELLO", "WORLD", "MORSE", "ALPHABET", "CIPHER" };
@@ -465,11 +465,11 @@ void Morse3() {
             originalText += words[rand() % words.size()];
         }
         for (char& c : originalText) c = toupper(c);
-        cout << "\n—„ÂÌÂËÓ‚‡ÌÌ˚È ÚÂÍÒÚ: " << originalText << endl;
+        cout << "\n–°–≥–µ–Ω–µ—Ä–∏—Ä–æ–≤–∞–Ω–Ω—ã–π —Ç–µ–∫—Å—Ç: " << originalText << endl;
     }
     else if (methodEncode == 3) {
         string filename;
-        cout << "¬‚Â‰ËÚÂ ËÏˇ Ù‡ÈÎ‡: ";
+        cout << "–í–≤–µ–¥–∏—Ç–µ –∏–º—è —Ñ–∞–π–ª–∞: ";
         cin >> filename;
         ifstream file(filename);
         if (file) {
@@ -477,15 +477,15 @@ void Morse3() {
             getline(file, originalText);
             file.close();
             for (char& c : originalText) c = toupper(c);
-            cout << "\n“ÂÍÒÚ ËÁ Ù‡ÈÎ‡: " << originalText << endl;
+            cout << "\n–¢–µ–∫—Å—Ç –∏–∑ —Ñ–∞–π–ª–∞: " << originalText << endl;
         }
         else {
-            cout << "Œ¯Ë·Í‡ ÓÚÍ˚ÚËˇ Ù‡ÈÎ‡!\n";
+            cout << "–û—à–∏–±–∫–∞ –æ—Ç–∫—Ä—ã—Ç–∏—è —Ñ–∞–π–ª–∞!\n";
             return;
         }
     }
     else {
-        cout << "ÕÂ‚ÂÌ˚È ‚˚·Ó!\n";
+        cout << "–ù–µ–≤–µ—Ä–Ω—ã–π –≤—ã–±–æ—Ä!\n";
         return;
     }
 
@@ -504,17 +504,17 @@ void Morse3() {
         }
     }
 
-    cout << "\n –≈«”À‹“¿“ ÿ»‘–Œ¬¿Õ»ﬂ \n";
-    cout << "»ÒıÓ‰Ì˚È ÚÂÍÒÚ: " << originalText << endl;
-    cout << "ÿËÙ ÃÓÁÂ: " << encoded << endl;
+    cout << "\n –†–ï–ó–£–õ–¨–¢–ê–¢ –®–ò–§–†–û–í–ê–ù–ò–Ø \n";
+    cout << "–ò—Å—Ö–æ–¥–Ω—ã–π —Ç–µ–∫—Å—Ç: " << originalText << endl;
+    cout << "–®–∏—Ñ—Ä –ú–æ—Ä–∑–µ: " << encoded << endl;
 
-    cout << "\n= ƒ≈ÿ»‘–Œ¬ ¿ =\n";
+    cout << "\n= –î–ï–®–ò–§–†–û–í–ö–ê =\n";
     string morseInput;
     int methodDecode = inputMethod();
 
     if (methodDecode == 1) {
         cin.ignore();
-        cout << "¬‚Â‰ËÚÂ ÒÚÓÍÛ ÃÓÁÂ (ÒËÏ‚ÓÎ˚ ‡Á‰ÂÎÂÌ˚ ÔÓ·ÂÎÓÏ, ÒÎÓ‚‡ ó /):\n";
+        cout << "–í–≤–µ–¥–∏—Ç–µ —Å—Ç—Ä–æ–∫—É –ú–æ—Ä–∑–µ (—Å–∏–º–≤–æ–ª—ã —Ä–∞–∑–¥–µ–ª–µ–Ω—ã –ø—Ä–æ–±–µ–ª–æ–º, —Å–ª–æ–≤–∞ ‚Äî /):\n";
         getline(cin, morseInput);
     }
     else if (methodDecode == 2) {
@@ -531,27 +531,27 @@ void Morse3() {
             if (i > 0) morseInput += " / ";
             morseInput += cods[rand() % cods.size()];
         }
-        cout << "\n—„ÂÌÂËÓ‚‡ÌÌ˚È ÒÎÛ˜‡ÈÌ˚È ÍÓ‰ ÃÓÁÂ:\n";
+        cout << "\n–°–≥–µ–Ω–µ—Ä–∏—Ä–æ–≤–∞–Ω–Ω—ã–π —Å–ª—É—á–∞–π–Ω—ã–π –∫–æ–¥ –ú–æ—Ä–∑–µ:\n";
         cout << morseInput << endl;
     }
     else if (methodDecode == 3) {
         string filename;
-        cout << "¬‚Â‰ËÚÂ ËÏˇ Ù‡ÈÎ‡ Ò ÍÓ‰ÓÏ ÃÓÁÂ: ";
+        cout << "–í–≤–µ–¥–∏—Ç–µ –∏–º—è —Ñ–∞–π–ª–∞ —Å –∫–æ–¥–æ–º –ú–æ—Ä–∑–µ: ";
         cin >> filename;
         ifstream file(filename);
         if (file) {
             cin.ignore();
             getline(file, morseInput);
             file.close();
-            cout << "\n Ó‰ ÃÓÁÂ ËÁ Ù‡ÈÎ‡:\n" << morseInput << endl;
+            cout << "\n–ö–æ–¥ –ú–æ—Ä–∑–µ –∏–∑ —Ñ–∞–π–ª–∞:\n" << morseInput << endl;
         }
         else {
-            cout << "Œ¯Ë·Í‡ ÓÚÍ˚ÚËˇ Ù‡ÈÎ‡!\n";
+            cout << "–û—à–∏–±–∫–∞ –æ—Ç–∫—Ä—ã—Ç–∏—è —Ñ–∞–π–ª–∞!\n";
             return;
         }
     }
     else {
-        cout << "ÕÂ‚ÂÌ˚È ‚˚·Ó!\n";
+        cout << "–ù–µ–≤–µ—Ä–Ω—ã–π –≤—ã–±–æ—Ä!\n";
         return;
     }
 
@@ -593,15 +593,15 @@ void Morse3() {
         }
     }
 
-    cout << "\n –≈«”À‹“¿“ ƒ≈ÿ»‘–Œ¬ » \n";
+    cout << "\n –†–ï–ó–£–õ–¨–¢–ê–¢ –î–ï–®–ò–§–†–û–í–ö–ò \n";
 
     if (unknownTokens.empty()) {
-        cout << "–‡Ò¯ËÙÓ‚‡ÌÌ˚È ÚÂÍÒÚ: " << decoded << endl;
-        cout << "ƒÂÍÓ‰ËÓ‚‡ÌËÂ ‚˚ÔÓÎÌÂÌÓ ÛÒÔÂ¯ÌÓ!\n";
+        cout << "–†–∞—Å—à–∏—Ñ—Ä–æ–≤–∞–Ω–Ω—ã–π —Ç–µ–∫—Å—Ç: " << decoded << endl;
+        cout << "–î–µ–∫–æ–¥–∏—Ä–æ–≤–∞–Ω–∏–µ –≤—ã–ø–æ–ª–Ω–µ–Ω–æ —É—Å–ø–µ—à–Ω–æ!\n";
     }
     else {
-        cout << "Œÿ»¡ ¿ ƒ≈ÿ»‘–Œ¬ »!\n";
-        cout << "—ÎÂ‰Û˛˘ËÂ ÍÓ‰˚ ÃÓÁÂ ÌÂ Ì‡È‰ÂÌ˚ ‚ ÒÎÓ‚‡Â:\n";
+        cout << "–û–®–ò–ë–ö–ê –î–ï–®–ò–§–†–û–í–ö–ò!\n";
+        cout << "–°–ª–µ–¥—É—é—â–∏–µ –∫–æ–¥—ã –ú–æ—Ä–∑–µ –Ω–µ –Ω–∞–π–¥–µ–Ω—ã –≤ —Å–ª–æ–≤–∞—Ä–µ:\n";
         for (const string& t : unknownTokens) {
             cout << "   \"" << t << "\"\n";
         }

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Header.h"
 
 int main() {
@@ -8,18 +8,18 @@ int main() {
 
     int choice;
     do {
-        cout << "   ËÀÁÎÐÀÒÎÐÍÀß ÐÀÁÎÒÀ ¹19\n";
-        cout << "1. Çàäà÷à 1: Êîä Õýììèíãà\n";
-        cout << "2. Çàäà÷à 2: Êîä Õàôôìàíà\n";
-        cout << "3. Çàäà÷à 3: Øèôð Ìîðçå\n";
-        cout << "0. Âûõîä\n";
-        cout << "Âûáîð: ";
+        cout << "   Ð›ÐÐ‘ÐžÐ ÐÐ¢ÐžÐ ÐÐÐ¯ Ð ÐÐ‘ÐžÐ¢Ð â„–19\n";
+        cout << "1. Ð—Ð°Ð´Ð°Ñ‡Ð° 1: ÐšÐ¾Ð´ Ð¥ÑÐ¼Ð¼Ð¸Ð½Ð³Ð°\n";
+        cout << "2. Ð—Ð°Ð´Ð°Ñ‡Ð° 2: ÐšÐ¾Ð´ Ð¥Ð°Ñ„Ñ„Ð¼Ð°Ð½Ð°\n";
+        cout << "3. Ð—Ð°Ð´Ð°Ñ‡Ð° 3: Ð¨Ð¸Ñ„Ñ€ ÐœÐ¾Ñ€Ð·Ðµ\n";
+        cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´\n";
+        cout << "Ð’Ñ‹Ð±Ð¾Ñ€: ";
         cin >> choice;
 
         if (cin.fail()) {
             cin.clear();
             cin.ignore(100, '\n');
-            cout << "Îøèáêà ââîäà!\n";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n";
             continue;
         }
 
@@ -27,8 +27,8 @@ int main() {
         case 1: Hamming15(); break;
         case 2: Huffman1(); break;
         case 3: Morse3(); break;
-        case 0: cout << "Ïðîãðàììà çàâåðøåíà.\n"; break;
-        default: cout << "Íåâåðíûé âûáîð!\n";
+        case 0: cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°.\n"; break;
+        default: cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€!\n";
         }
     } while (choice != 0);
 
